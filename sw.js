@@ -26,7 +26,7 @@ self.addEventListener('activate', (evt) => {
     console.log(`sw activé à ${new Date().toLocaleTimeString()}`); 
   
     // 5.4 Supprimer les anciennes instances de cache
-    let cacheCleanPromise = caches.keys().then()(keys => {
+    let cacheCleanPromise = caches.keys().then(keys => {
         keys.forEach(key => {            
             if(key !== cacheName){
                 caches.delete(key);
@@ -59,3 +59,29 @@ self.addEventListener('fetch', (evt) => {
         })
     );
 });
+
+self.registration.showNotification("Notification du SW", {
+    body:"je suis une notification dite persistante",
+  
+    // 7.4 Options de notifications grâce aux actions
+    actions:[
+        {action:"accept", title:"accepter"},
+        {action: "refuse", title: "refuser"}
+    ]
+})
+ 
+// 7.4 Options de notifications grâce aux actions
+// Ecouteur au clic d'un des deux boutons de la notification
+self.addEventListener("notificationclick", evt => {
+    console.log("notificationclick evt", evt);
+    if(evt.action === "accept"){
+        console.log("vous avez accepté");
+    } else if(evt.action === "refuse"){
+        console.log("vous avez refusé");
+    } else{
+        console.log("vous avez cliqué sur la notification (pas sur un bouton)");
+    }
+
+    // 7.5 Fermer programmatiquement une notification
+    evt.notification.close();
+}) 
