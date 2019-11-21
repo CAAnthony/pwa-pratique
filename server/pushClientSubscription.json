@@ -1,0 +1,7 @@
+{
+    "endpoint": "https://fcm.googleapis.com/fcm/send/dB3TsRHipyE:APA91bEL9JQD6YznKtvXTtmIhTgmGzNNZxgM6jJS874f5bFhvnt5X7n_MCFQFVMY47HiYltySgcOa1XqDLkV7xLgGHKvVVCZAOpC17v9FN0bm4jjPGzgJ1W3QBfQozz1SyET45Ztie2z",
+    "keys": {
+      "p256dh": "BLznUij1gk7CsnyGMsIMcSmwK7Wb7ogjIWpF+pBbf3gjuNT5TBFsZTU8SFgTI838Y/CiE0H2z3BoZvJip0yxG1c=",
+      "auth": "iNn1iqcQZr1+EpqS8fnVbQ=="
+    }
+  }
