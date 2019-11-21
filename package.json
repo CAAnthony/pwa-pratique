@@ -4,6 +4,7 @@
   "description": "Cours PWA\r Premier commit test 14/11/2019",
   "main": "main.js",
   "scripts": {
+    "jsonserver": "json-server -p 3024 --watch db.json",
     "start": "live-server --port=3023",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
