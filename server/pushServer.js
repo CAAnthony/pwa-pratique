@@ -8,7 +8,7 @@ console.log(pushServerKeys, pushClientSubscription);
  
 // En production on ferait une boucle de l'ensemble des souscriptions pour envoyer les notifications
 // Configuration des "details" permettant au FCM de nous contacter
-webPush.setVapidDetails('mailto:quentinbc@gmail.com', pushServerKeys.publicKey, pushServerKeys.privateKey);
+webPush.setVapidDetails('mailto:anthony.careddu23@gmail.com', pushServerKeys.publicKey, pushServerKeys.privateKey);
  
 // Pour sendNotification API reference sendNotification(pushSubscription, payload, options)
 // voir https://github.com/web-push-libs/web-push#sendnotificationpushsubscription-payload-options

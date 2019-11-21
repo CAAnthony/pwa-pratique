@@ -2,7 +2,7 @@ console.log('hello depuis main');
 const technosDiv = document.querySelector('#technos');
 
 function loadTechnologies(technos) {
-    fetch('http://localhost:3024/technos')
+    fetch('https://us-central1-pwa-technos-careddu.cloudfunctions.net/getTechnos')
         .then(response => {
             response.json()
                 .then(technos => {
